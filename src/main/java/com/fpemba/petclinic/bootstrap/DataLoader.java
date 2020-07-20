@@ -56,6 +56,5 @@ public class DataLoader implements CommandLineRunner {
 
         System.out.println("Loaded Vets.....");
 
-
     }
 }
