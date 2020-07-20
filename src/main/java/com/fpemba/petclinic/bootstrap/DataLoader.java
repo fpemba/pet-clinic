@@ -5,8 +5,6 @@ import com.fpemba.petclinic.models.Owner;
 import com.fpemba.petclinic.models.Vet;
 import com.fpemba.petclinic.services.OwnerService;
 import com.fpemba.petclinic.services.VetService;
-import com.fpemba.petclinic.services.maps.OwnerServiceMap;
-import com.fpemba.petclinic.services.maps.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,23 +15,24 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
 
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
+
 
     @Override
     public void run(String... args) throws Exception {
 
         Owner owner1 = new Owner();
-        owner1.setId(1l);
+        owner1.setId(1L);
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
-        owner2.setId(2l);
+        owner2.setId(2L);
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
 

@@ -2,9 +2,11 @@ package com.fpemba.petclinic.services.maps;
 
 import com.fpemba.petclinic.models.Owner;
 import com.fpemba.petclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
