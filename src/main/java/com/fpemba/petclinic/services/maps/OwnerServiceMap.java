@@ -1,11 +1,11 @@
-package com.fpemba.petclinic.Services.map;
+package com.fpemba.petclinic.services.maps;
 
-import com.fpemba.petclinic.Model.Owner;
-import com.fpemba.petclinic.Services.CrudService;
+import com.fpemba.petclinic.models.Owner;
+import com.fpemba.petclinic.services.OwnerService;
 
 import java.util.Set;
 
-public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements CrudService<Owner,Long> {
+public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements OwnerService {
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -35,4 +35,8 @@ public class OwnerServiceMap extends AbstractMapService<Owner,Long> implements C
     }
 
 
+    @Override
+    public Owner findByLastName(String lastName) {
+        return null;
+    }
 }

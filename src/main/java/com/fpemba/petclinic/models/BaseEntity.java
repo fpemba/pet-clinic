@@ -1,4 +1,4 @@
-package com.fpemba.petclinic.Model;
+package com.fpemba.petclinic.models;
 
 import java.io.Serializable;
 

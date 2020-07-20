@@ -1,4 +1,4 @@
-package com.fpemba.petclinic.Services.map;
+package com.fpemba.petclinic.services.maps;
 
 import java.util.HashMap;
 import java.util.HashSet;

@@ -1,11 +1,11 @@
-package com.fpemba.petclinic.Services.map;
+package com.fpemba.petclinic.services.maps;
 
-import com.fpemba.petclinic.Model.Vet;
-import com.fpemba.petclinic.Services.CrudService;
+import com.fpemba.petclinic.models.Vet;
+import com.fpemba.petclinic.services.VetService;
 
 import java.util.Set;
 
-public class VetServiceMap extends AbstractMapService<Vet,Long> implements CrudService<Vet,Long> {
+public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
         return super.findAll();

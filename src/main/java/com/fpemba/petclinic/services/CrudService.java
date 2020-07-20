@@ -1,4 +1,4 @@
-package com.fpemba.petclinic.Services;
+package com.fpemba.petclinic.services;
 
 import java.util.Set;
 
