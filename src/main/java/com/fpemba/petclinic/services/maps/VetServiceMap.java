@@ -2,7 +2,7 @@ package com.fpemba.petclinic.services.maps;
 
 import com.fpemba.petclinic.models.Specialty;
 import com.fpemba.petclinic.models.Vet;
-import com.fpemba.petclinic.services.SpecialtyService;
+import com.fpemba.petclinic.services.SpecialityService;
 import com.fpemba.petclinic.services.VetService;
 import org.springframework.stereotype.Service;
 
@@ -11,10 +11,10 @@ import java.util.Set;
 @Service
 public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetService {
 
-    private final SpecialtyService specialtyService;
+    private final SpecialityService specialityService;
 
-    public VetServiceMap(SpecialtyService specialtyService) {
-        this.specialtyService = specialtyService;
+    public VetServiceMap(SpecialityService specialityService) {
+        this.specialityService = specialityService;
     }
 
 
@@ -35,7 +35,7 @@ public class VetServiceMap extends AbstractMapService<Vet,Long> implements VetSe
         if(object.getSpecialities().size() > 0){
             object.getSpecialities().forEach(specialty -> {
                 if(specialty.getId() == null){
-                    Specialty savedSpecialty = specialtyService.save(specialty);
+                    Specialty savedSpecialty = specialityService.save(specialty);
                     specialty.setId(savedSpecialty.getId());
                 }
             });

@@ -1,13 +1,13 @@
 package com.fpemba.petclinic.services.maps;
 
 import com.fpemba.petclinic.models.Specialty;
-import com.fpemba.petclinic.services.SpecialtyService;
+import com.fpemba.petclinic.services.SpecialityService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialtyServiceMap extends AbstractMapService<Specialty,Long> implements SpecialtyService {
+public class SpecialityServiceMap extends AbstractMapService<Specialty,Long> implements SpecialityService {
     @Override
     public Set<Specialty> findAll() {
         return super.findAll();
