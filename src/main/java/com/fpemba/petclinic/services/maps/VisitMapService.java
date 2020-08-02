@@ -2,11 +2,13 @@ package com.fpemba.petclinic.services.maps;
 
 import com.fpemba.petclinic.models.Visit;
 import com.fpemba.petclinic.services.VisitService;
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
+@Profile({"default","maps"})
 public class VisitMapService extends AbstractMapService<Visit,Long >implements VisitService {
 
     @Override
